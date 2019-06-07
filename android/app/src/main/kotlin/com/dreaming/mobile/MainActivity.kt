@@ -1,4 +1,4 @@
-package com.silverpath.mobile
+package com.dreaming.mobile
 
 import android.os.Bundle
 
