@@ -50,8 +50,6 @@ class KithCard extends Card {
                 child: Text(
                   kith.description,
                   textScaleFactor: 1.2,
-                  maxLines: 10,
-                  overflow: TextOverflow.fade,
                   style: TextStyle(
                     fontStyle: FontStyle.italic
                   ),
