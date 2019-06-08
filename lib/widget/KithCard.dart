@@ -10,7 +10,7 @@ class KithCard extends Card {
   Widget build(BuildContext context) {
     return Card(
       elevation: 0,
-      color: Color.fromRGBO(255, 250, 210, 0.75),
+      color: Color.fromRGBO(255, 250, 210, 0.4),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(24.0),
       ),
@@ -27,7 +27,7 @@ class KithCard extends Card {
                   height: 50,
                 ),
                 Padding(
-                  padding: EdgeInsets.only(left: 20),
+                  padding: EdgeInsets.only(left: 10),
                   child: Text(
                     this.kith.name,
                     style: TextStyle(
