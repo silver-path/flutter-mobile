@@ -1,5 +1,1 @@
-enum Category {
-  kithain,
-  gallain,
-  thallain
-}
+enum Category { kithain, gallain, thallain }

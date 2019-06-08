@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import '../data/Kith.dart';
+
 class KithCard extends Card {
   final LightKith kith;
+
   KithCard(this.kith);
 
   @override
@@ -29,17 +31,17 @@ class KithCard extends Card {
                   child: Text(
                     this.kith.name,
                     style: TextStyle(
-                      fontSize: 36.0,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: "Meath"
-                    ),
+                        fontSize: 36.0,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: "Meath"),
                   ),
                 ),
               ],
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(bottom: 12.0, left: 12.0, right: 12.0),
+            padding:
+                const EdgeInsets.only(bottom: 12.0, left: 12.0, right: 12.0),
             child: Container(
               decoration: BoxDecoration(
                 color: Color.fromRGBO(255, 255, 255, 0.9),
@@ -50,9 +52,7 @@ class KithCard extends Card {
                 child: Text(
                   kith.description,
                   textScaleFactor: 1.2,
-                  style: TextStyle(
-                    fontStyle: FontStyle.italic
-                  ),
+                  style: TextStyle(fontStyle: FontStyle.italic),
                 ),
               ),
             ),
