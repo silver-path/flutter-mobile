@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../data/Kith.dart';
 
 class KithCard extends Card {
-  final LightKith kith;
+  final Kith kith;
 
   KithCard(this.kith);
 

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mobile/widget/KithList.dart';
 import './service/KithService.dart';
+import './data/Court.dart';
+import './assets/silver_path_icons.dart';
 
 void main() => runApp(SilverPathApp());
 
@@ -47,6 +49,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   KithService service = KithService();
+  Court court = Court.seelie;
 
   @override
   Widget build(BuildContext context) {
@@ -56,14 +59,80 @@ class _HomePageState extends State<HomePage> {
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
-
+    print('build main');
     return Scaffold(
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
+        actions: <Widget>[
+          Center(
+            child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
+              child: Ink(
+                decoration: ShapeDecoration(
+                  color: Colors.lightBlue,
+                  shape: CircleBorder(),
+                ),
+                child: IconButton(
+                    icon: Icon(
+                      SilverPathIcons.seelie,
+                      color: Colors.white,
+                    ),
+                    onPressed: () {
+                      setState(() {
+                        court = Court.seelie;
+                      });
+                    },
+                ),
+              ),
+            ),
+          ),
+          Center(
+            child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
+              child: Ink(
+                decoration: ShapeDecoration(
+                  color: Colors.lightBlue,
+                  shape: CircleBorder(),
+                ),
+                child: IconButton(
+                    icon: Icon(
+                      SilverPathIcons.unseelie,
+                      color: Colors.white,
+                    ),
+                    onPressed: () {
+                      setState(() {
+                        court = Court.unseelie;
+                      });
+                    },),
+              ),
+            ),
+          ),
+          Center(
+            child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
+              child: Ink(
+                decoration: ShapeDecoration(
+                  color: Colors.lightBlue,
+                  shape: CircleBorder(),
+                ),
+                child: IconButton(
+                    icon: Icon(
+                      SilverPathIcons.thallain,
+                      color: Colors.white,
+                    ),
+                    onPressed: () {
+                      setState(() {
+                        court = Court.shadow;
+                      });
+                    },),
+              ),
+            ),
+          ),
+        ],
       ),
-      body: KithList(service.fetch()),
+      body: KithList(service.fetch(court), court),
     );
   }
 }
