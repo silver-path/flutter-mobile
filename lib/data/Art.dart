@@ -5,11 +5,10 @@ class Art {
   final String description;
   final List<Cantrip> cantrips;
 
-  Art({
-    @required this.name,
-    @required this.description,
-    @required this.cantrips
-  });
+  Art(
+      {@required this.name,
+      @required this.description,
+      @required this.cantrips});
 }
 
 class Cantrip {

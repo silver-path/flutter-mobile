@@ -20,6 +20,7 @@ class Background {
   static Map<String, double> fromPoint(Point point) =>
       {'x': point.x, 'y': point.y};
 
-  factory Background.fromJson(Map<String, dynamic> json) => _$BackgroundFromJson(json);
+  factory Background.fromJson(Map<String, dynamic> json) =>
+      _$BackgroundFromJson(json);
   Map<String, dynamic> toJson() => _$BackgroundToJson(this);
 }

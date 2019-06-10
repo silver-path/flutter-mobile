@@ -11,7 +11,7 @@
 ///      fonts:
 ///       - asset: fonts/SilverPathIcons.ttf
 ///
-/// 
+///
 ///
 import 'package:flutter/widgets.dart';
 
@@ -20,7 +20,9 @@ class SilverPathIcons {
 
   static const _kFontFam = 'SilverPathIcons';
 
-  static const IconData thallain = const IconData(0xe800, fontFamily: _kFontFam);
+  static const IconData thallain =
+      const IconData(0xe800, fontFamily: _kFontFam);
   static const IconData seelie = const IconData(0xe801, fontFamily: _kFontFam);
-  static const IconData unseelie = const IconData(0xe802, fontFamily: _kFontFam);
+  static const IconData unseelie =
+      const IconData(0xe802, fontFamily: _kFontFam);
 }
