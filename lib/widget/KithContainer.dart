@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_advanced_networkimage/provider.dart';
 import '../data/Kith.dart';
 import '../data/Court.dart';
-import '../data/Background.dart';
 import './KithCard.dart';
 
 class KithContainer extends StatefulWidget {
@@ -64,7 +63,8 @@ class _KithContainerState extends State<KithContainer>
               cacheRule: CacheRule(maxAge: const Duration(days: 7)),
             ),
             fit: BoxFit.none,
-            alignment: Alignment(kith.display(court).position.x, kith.display(court).position.y)),
+            alignment: Alignment(kith.display(court).position.x,
+                kith.display(court).position.y)),
         borderRadius: BorderRadius.all(Radius.circular(48.0)),
         color: Colors.amber,
       ),
