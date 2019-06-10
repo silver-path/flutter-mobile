@@ -24,6 +24,6 @@ flutter:
     - family:  SilverPathIcons
       fonts:
       - asset: fonts/SilverPathIcons.ttf
-#    - family: Meath
-        ##      fonts:
-        ##      - asset: fonts/meath.ttf
+    - family: Meath
+      fonts:
+      - asset: fonts/Meath.ttf

@@ -22,8 +22,7 @@ class SilverPathApp extends StatelessWidget {
           // or simply save your changes to "hot reload" in a Flutter IDE).
           // Notice that the counter didn't reset back to zero; the application
           // is not restarted.
-          primarySwatch: Colors.blue,
-          fontFamily: 'Meath'),
+          primarySwatch: Colors.blue),
       home: HomePage(title: 'Silver Path'),
     );
   }
@@ -64,7 +63,13 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
+        title: Text(
+          widget.title,
+          style: TextStyle(
+            fontFamily: 'Meath',
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         actions: <Widget>[
           Center(
             child: Container(
@@ -75,15 +80,15 @@ class _HomePageState extends State<HomePage> {
                   shape: CircleBorder(),
                 ),
                 child: IconButton(
-                    icon: Icon(
-                      SilverPathIcons.seelie,
-                      color: Colors.white,
-                    ),
-                    onPressed: () {
-                      setState(() {
-                        court = Court.seelie;
-                      });
-                    },
+                  icon: Icon(
+                    SilverPathIcons.seelie,
+                    color: Colors.white,
+                  ),
+                  onPressed: () {
+                    setState(() {
+                      court = Court.seelie;
+                    });
+                  },
                 ),
               ),
             ),
@@ -97,15 +102,16 @@ class _HomePageState extends State<HomePage> {
                   shape: CircleBorder(),
                 ),
                 child: IconButton(
-                    icon: Icon(
-                      SilverPathIcons.unseelie,
-                      color: Colors.white,
-                    ),
-                    onPressed: () {
-                      setState(() {
-                        court = Court.unseelie;
-                      });
-                    },),
+                  icon: Icon(
+                    SilverPathIcons.unseelie,
+                    color: Colors.white,
+                  ),
+                  onPressed: () {
+                    setState(() {
+                      court = Court.unseelie;
+                    });
+                  },
+                ),
               ),
             ),
           ),
@@ -118,15 +124,16 @@ class _HomePageState extends State<HomePage> {
                   shape: CircleBorder(),
                 ),
                 child: IconButton(
-                    icon: Icon(
-                      SilverPathIcons.thallain,
-                      color: Colors.white,
-                    ),
-                    onPressed: () {
-                      setState(() {
-                        court = Court.shadow;
-                      });
-                    },),
+                  icon: Icon(
+                    SilverPathIcons.thallain,
+                    color: Colors.white,
+                  ),
+                  onPressed: () {
+                    setState(() {
+                      court = Court.shadow;
+                    });
+                  },
+                ),
               ),
             ),
           ),
