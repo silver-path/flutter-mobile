@@ -8,7 +8,7 @@ class KithContainer extends StatefulWidget {
   final Court court;
   final Kith kith;
 
-  KithContainer(this.kith, this.court);
+  KithContainer({ @required this.kith, @required this.court, Key key }) : super(key: key);
 
   @override
   _KithContainerState createState() {
@@ -39,7 +39,7 @@ class _KithContainerState extends State<KithContainer>
     controller =
         AnimationController(vsync: this, duration: Duration(milliseconds: 250));
     animation = CurvedAnimation(parent: controller, curve: Curves.elasticIn);
-    move = Tween(begin: 1.0, end: 0.85).animate(controller);
+    move = Tween(begin: 0.8, end: 0.5).animate(controller);
     controller.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
         controller.reverse();
@@ -62,13 +62,11 @@ class _KithContainerState extends State<KithContainer>
               useDiskCache: true,
               cacheRule: CacheRule(maxAge: const Duration(days: 7)),
             ),
-            fit: BoxFit.none,
-            alignment: Alignment(kith.display(court).position.x,
-                kith.display(court).position.y)),
+            fit: BoxFit.scaleDown,
+        ),
         borderRadius: BorderRadius.all(Radius.circular(48.0)),
-        color: Colors.amber,
+        color: Colors.white,
       ),
-//      child: Align(alignment: Alignment(0.0, 0.8), child: KithCard(kith),),
       child: AnimatedBuilder(
           animation: controller,
           builder: (context, child) {

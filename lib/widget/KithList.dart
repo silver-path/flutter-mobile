@@ -15,10 +15,14 @@ class KithList extends StatelessWidget {
     return ListView.builder(
         key: Key(court.toString()),
         scrollDirection: Axis.horizontal,
+        padding: EdgeInsets.only(bottom: 48),
         itemCount: this.kiths.length,
         itemBuilder: (BuildContext context, int index) {
           print('trigger item builder for list with court ${court.toString()}');
-          return KithContainer(this.kiths[index], court);
+          return KithContainer(
+              key: Key(this.kiths[index].name),
+              kith: this.kiths[index],
+              court: court);
         });
   }
 }

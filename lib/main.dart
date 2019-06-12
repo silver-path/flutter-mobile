@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:mobile/widget/KithList.dart';
 import './service/KithService.dart';
 import './data/Court.dart';
-import './assets/silver_path_icons.dart';
 
 void main() => runApp(SilverPathApp());
 
@@ -61,8 +61,7 @@ class _HomePageState extends State<HomePage> {
     print('build main');
     return Scaffold(
       appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
+        elevation: 8.0,
         title: Text(
           widget.title,
           style: TextStyle(
@@ -70,74 +69,6 @@ class _HomePageState extends State<HomePage> {
             fontWeight: FontWeight.bold,
           ),
         ),
-        actions: <Widget>[
-          Center(
-            child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
-              child: Ink(
-                decoration: ShapeDecoration(
-                  color: Colors.lightBlue,
-                  shape: CircleBorder(),
-                ),
-                child: IconButton(
-                  icon: Icon(
-                    SilverPathIcons.seelie,
-                    color: Colors.white,
-                  ),
-                  onPressed: () {
-                    setState(() {
-                      court = Court.seelie;
-                    });
-                  },
-                ),
-              ),
-            ),
-          ),
-          Center(
-            child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
-              child: Ink(
-                decoration: ShapeDecoration(
-                  color: Colors.lightBlue,
-                  shape: CircleBorder(),
-                ),
-                child: IconButton(
-                  icon: Icon(
-                    SilverPathIcons.unseelie,
-                    color: Colors.white,
-                  ),
-                  onPressed: () {
-                    setState(() {
-                      court = Court.unseelie;
-                    });
-                  },
-                ),
-              ),
-            ),
-          ),
-          Center(
-            child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
-              child: Ink(
-                decoration: ShapeDecoration(
-                  color: Colors.lightBlue,
-                  shape: CircleBorder(),
-                ),
-                child: IconButton(
-                  icon: Icon(
-                    SilverPathIcons.thallain,
-                    color: Colors.white,
-                  ),
-                  onPressed: () {
-                    setState(() {
-                      court = Court.shadow;
-                    });
-                  },
-                ),
-              ),
-            ),
-          ),
-        ],
       ),
       body: FutureBuilder(
         future: service.fetch(court),
@@ -149,6 +80,24 @@ class _HomePageState extends State<HomePage> {
               child: CircularProgressIndicator(),
             );
         },
+      ),
+      floatingActionButton: Container(
+        width: 150.0,
+        height: 150.0,
+        child: IconButton(
+          icon: court == Court.seelie
+              ? SvgPicture.asset('assets/seelie.svg')
+              : court == Court.unseelie
+                  ? SvgPicture.asset('assets/unseelie.svg')
+                  : SvgPicture.asset('assets/shadow.svg'),
+          onPressed: () {
+            setState(() {
+              court = court == Court.seelie
+                  ? Court.unseelie
+                  : court == Court.unseelie ? Court.shadow : Court.seelie;
+            });
+          },
+        ),
       ),
     );
   }
