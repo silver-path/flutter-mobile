@@ -139,7 +139,17 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
-      body: KithList(service.fetch(court), court),
+      body: FutureBuilder(
+        future: service.fetch(court),
+        builder: (BuildContext context, AsyncSnapshot snapshot) {
+          if (snapshot.hasData)
+            return KithList(snapshot.data, court);
+          else
+            return Center(
+              child: CircularProgressIndicator(),
+            );
+        },
+      ),
     );
   }
 }

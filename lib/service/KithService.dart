@@ -2,9 +2,10 @@ import 'dart:math';
 import '../data/Kith.dart';
 import '../data/Court.dart';
 import '../data/Background.dart';
+import 'dart:async';
 
 class KithService {
-  List<Kithain> kithains(Court court) {
+  Future<List<Kithain>> kithains(Court court) async {
     return [
       Kithain(
         name: 'Boggan',
@@ -231,7 +232,7 @@ class KithService {
     ];
   }
 
-  List<Thallain> thallains() {
+  Future<List<Thallain>> thallains() async {
     return [
       Thallain(
         name: 'Boggart',
@@ -248,9 +249,11 @@ class KithService {
     ];
   }
 
-  List<Kith> fetch(Court court) {
-    if (court != Court.shadow) return kithains(court);
-    return [kithains(court), thallains()].expand((x) => x).toList()
+  Future<List<Kith>> fetch(Court court) async {
+    final List<Kithain> kithains = await this.kithains(court);
+    if (court != Court.shadow) return kithains;
+    final List<Thallain> thallains = await this.thallains();
+    return [kithains, thallains].expand((x) => x).toList()
       ..sort((Kith a, Kith b) =>
           a.name.toLowerCase().compareTo(b.name.toLowerCase()));
   }
