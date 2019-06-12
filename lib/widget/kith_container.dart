@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced_networkimage/provider.dart';
-import '../data/Kith.dart';
-import '../data/Court.dart';
-import './KithCard.dart';
+import '../data/kith.dart';
+import '../data/court.dart';
+import './kith_card.dart';
 
 class KithContainer extends StatefulWidget {
   final Court court;

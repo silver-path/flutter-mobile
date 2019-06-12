@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../data/Kith.dart';
+import '../data/kith.dart';
 
 class KithCard extends Card {
   final Kith kith;

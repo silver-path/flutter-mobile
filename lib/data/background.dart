@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'dart:math';
 
-part 'Background.g.dart';
+part 'background.g.dart';
 
 @JsonSerializable()
 class Background {

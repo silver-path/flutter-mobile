@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../widget/KithContainer.dart';
-import '../data/Kith.dart';
-import '../data/Court.dart';
+import '../widget/kith_container.dart';
+import '../data/kith.dart';
+import '../data/court.dart';
 
 class KithList extends StatelessWidget {
   final List<Kith> kiths;

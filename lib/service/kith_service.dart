@@ -1,7 +1,7 @@
 import 'dart:math';
-import '../data/Kith.dart';
-import '../data/Court.dart';
-import '../data/Background.dart';
+import '../data/kith.dart';
+import '../data/court.dart';
+import '../data/background.dart';
 import 'dart:async';
 
 class KithService {

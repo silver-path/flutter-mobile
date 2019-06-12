@@ -1,9 +1,9 @@
 import 'package:flutter/foundation.dart';
 import 'package:json_annotation/json_annotation.dart';
-import './Court.dart';
-import './Background.dart';
+import './court.dart';
+import './background.dart';
 
-part 'Kith.g.dart';
+part 'kith.g.dart';
 
 class Displayable {
   Background display(Court court) => null;

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:mobile/widget/KithList.dart';
-import './service/KithService.dart';
-import './data/Court.dart';
+import 'package:mobile/widget/kith_list.dart';
+import './service/kith_service.dart';
+import './data/court.dart';
 
 void main() => runApp(SilverPathApp());
 

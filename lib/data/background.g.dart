@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'Background.dart';
+part of 'background.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
