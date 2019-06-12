@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_advanced_networkimage/provider.dart';
 import '../data/kith.dart';
 import '../data/court.dart';
-import './kith_card.dart';
+import '../core/size_config.dart';
 
 class KithContainer extends StatefulWidget {
   final Court court;
   final Kith kith;
 
-  KithContainer({ @required this.kith, @required this.court, Key key }) : super(key: key);
+  KithContainer({@required this.kith, @required this.court, Key key})
+      : super(key: key);
 
   @override
   _KithContainerState createState() {
@@ -24,6 +25,8 @@ class _KithContainerState extends State<KithContainer>
   AnimationController controller;
   CurvedAnimation animation;
   Animation<double> move;
+
+  String orientation;
 
   _KithContainerState(this.kith, this.court);
 
@@ -48,8 +51,7 @@ class _KithContainerState extends State<KithContainer>
     controller.forward();
   }
 
-  @override
-  Widget build(BuildContext context) {
+  Widget portrait(BuildContext context) {
     return Container(
       key: Key(kith.court.toString()),
       width: MediaQuery.of(context).size.width - (margin * 2),
@@ -57,12 +59,12 @@ class _KithContainerState extends State<KithContainer>
       padding: EdgeInsets.all(padding),
       decoration: BoxDecoration(
         image: DecorationImage(
-            image: AdvancedNetworkImage(
-              kith.display(court).url,
-              useDiskCache: true,
-              cacheRule: CacheRule(maxAge: const Duration(days: 7)),
-            ),
-            fit: BoxFit.scaleDown,
+          image: AdvancedNetworkImage(
+            kith.display(court).url,
+            useDiskCache: true,
+            cacheRule: CacheRule(maxAge: const Duration(days: 7)),
+          ),
+          fit: BoxFit.scaleDown,
         ),
         borderRadius: BorderRadius.all(Radius.circular(48.0)),
         color: Colors.white,
@@ -71,11 +73,133 @@ class _KithContainerState extends State<KithContainer>
           animation: controller,
           builder: (context, child) {
             return Align(
-              child: KithCard(kith),
+              child: Card(
+                elevation: 0,
+                color: Color.fromRGBO(255, 250, 210, 0.4),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(24.0),
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.all(24.0),
+                      child: Row(
+                        children: <Widget>[
+                          Image.network(
+                            this.kith.icon,
+                            fit: BoxFit.fitHeight,
+                            height: 50,
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(left: 10),
+                            child: Text(
+                              this.kith.name,
+                              style: TextStyle(
+                                  fontSize: 36.0,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: "Meath"),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(
+                          bottom: 12.0, left: 12.0, right: 12.0),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Color.fromRGBO(255, 255, 255, 0.9),
+                          borderRadius: BorderRadius.all(Radius.circular(18.0)),
+                        ),
+                        child: Padding(
+                          padding: EdgeInsets.all(10.0),
+                          child: Text(
+                            kith.description,
+                            textScaleFactor: 1.2,
+                            style: TextStyle(fontStyle: FontStyle.italic),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
               alignment: Alignment(0.0, move.value * 1.0),
             );
           }),
     );
+  }
+
+  Widget landscape(BuildContext context) {
+    return Container(
+      key: Key(kith.court.toString()),
+      width: MediaQuery.of(context).size.width - (margin * 2),
+      child: Row(
+        children: <Widget>[
+          Container(
+            width: (MediaQuery.of(context).size.width - (margin * 2)) / 3,
+            margin: EdgeInsets.all(margin),
+            padding: EdgeInsets.all(padding),
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AdvancedNetworkImage(
+                  kith.display(court).url,
+                  useDiskCache: true,
+                  cacheRule: CacheRule(maxAge: const Duration(days: 7)),
+                ),
+                fit: BoxFit.scaleDown,
+              ),
+              borderRadius: BorderRadius.all(Radius.circular(48.0)),
+              color: Colors.white,
+            ),
+          ),
+          Flexible(
+            child: Column(
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Row(
+                    children: <Widget>[
+                      Image.network(
+                        this.kith.icon,
+                        fit: BoxFit.fitHeight,
+                        height: 50,
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 10),
+                        child: Text(
+                          this.kith.name,
+                          style: TextStyle(
+                              fontSize: 36.0,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: "Meath"),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Text(
+                    kith.description,
+                    textScaleFactor: 1.2,
+                    style: TextStyle(fontStyle: FontStyle.italic),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return SizeConfig.isPortrait(context)
+        ? portrait(context)
+        : landscape(context);
   }
 
   @override
