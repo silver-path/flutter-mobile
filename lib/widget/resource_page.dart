@@ -22,18 +22,12 @@ class ResourcePageState extends State<ResourcePage> {
             asset: 'assets/kith.svg',
             text: 'Kiths',
             description: 'Kithains, Gallains, Thallains, etc',
-            onTap: () {
-              print('kith pressed');
-            },
           ),
           Divider(),
           HomeListTile(
             asset: 'assets/treasure.svg',
             text: 'Treasures',
             description: 'Inspiration for Treasures and Dross',
-            onTap: () {
-              print('treasure pressed');
-            },
           ),
           Divider(),
           HomeListExpansionTile(
@@ -45,18 +39,12 @@ class ResourcePageState extends State<ResourcePage> {
                 asset: 'assets/freehold.svg',
                 text: 'Freeholds',
                 description: 'Enchanted places',
-                onTap: () {
-                  print('freehold pressed');
-                },
               ),
               Divider(),
               HomeListTile(
                 asset: 'assets/glen.svg',
                 text: 'Glens',
                 description: 'Hidden enchanted havens',
-                onTap: () {
-                  print('glen pressed');
-                },
               ),
             ],
           ),

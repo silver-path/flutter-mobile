@@ -54,9 +54,6 @@ class HomePageState extends State<HomePage> {
                   asset: 'assets/chronicle.svg',
                   text: 'Chronicles',
                   description: 'Start or continue your adventures',
-                  onTap: () {
-                    print('chronicle pressed');
-                  },
                 ),
                 Divider(),
                 HomeListTile(

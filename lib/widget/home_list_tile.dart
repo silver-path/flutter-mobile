@@ -27,11 +27,21 @@ class HomeListTile extends StatelessWidget {
       children: <Widget>[
         Text(
           text,
-          style: Theme.of(context).textTheme.subtitle,
+          style: onTap != null
+              ? Theme.of(context).textTheme.subtitle
+              : Theme.of(context)
+                  .textTheme
+                  .subtitle
+                  .copyWith(color: Colors.grey),
         ),
         Text(
           description,
-          style: Theme.of(context).textTheme.body2,
+          style: onTap != null
+              ? Theme.of(context).textTheme.body2
+              : Theme.of(context)
+              .textTheme
+              .body2
+              .copyWith(color: Colors.grey),
         ),
       ],
     );
