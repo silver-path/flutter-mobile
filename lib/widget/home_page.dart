@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'home_list_item.dart';
-import 'home_list_items.dart';
+import 'home_list_tile.dart';
+import 'home_list_expansion_tile.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -18,32 +18,44 @@ class HomePageState extends State<HomePage> {
       body: ListView(
         scrollDirection: Axis.vertical,
         children: <Widget>[
-          HomeListItem(
+          HomeListTile(
+            asset: 'assets/kith.svg',
+            text: 'Kiths',
+            description: 'Kithains, Gallains, Thallains, etc',
+            onTap: () {
+              print('kith pressed');
+            },
+          ),
+          Divider(),
+          HomeListTile(
             asset: 'assets/treasure.svg',
             text: 'Treasures',
+            description: 'Inspiration for Treasures and Dross',
             onTap: () {
               print('treasure pressed');
             },
           ),
           Divider(),
-          CustomExpansionTile(
+          HomeListExpansionTile(
             asset: 'assets/dreaming.svg',
             text: 'The Dreaming',
             children: <Widget>[
               Divider(),
-              HomeListItem(
-                asset: 'assets/dreaming.svg',
-                text: 'something',
+              HomeListTile(
+                asset: 'assets/freehold.svg',
+                text: 'Freeholds',
+                description: 'Enchanted places',
                 onTap: () {
-                  print('something pressed');
+                  print('freehold pressed');
                 },
               ),
               Divider(),
-              HomeListItem(
-                asset: 'assets/dreaming.svg',
-                text: 'something else',
+              HomeListTile(
+                asset: 'assets/glen.svg',
+                text: 'Glens',
+                description: 'Hidden enchanted havens',
                 onTap: () {
-                  print('something else pressed');
+                  print('glen pressed');
                 },
               ),
             ],

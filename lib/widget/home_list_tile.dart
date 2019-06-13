@@ -1,20 +1,41 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class HomeListItem extends StatelessWidget {
+class HomeListTile extends StatelessWidget {
   final String asset;
   final String text;
+  final String description;
   final Widget icon;
   final Function onTap;
 
-  HomeListItem({
+  HomeListTile({
     @required this.asset,
     @required this.text,
+    this.description,
     this.icon,
     this.onTap,
   });
 
-  Animation<double> _iconTurns;
+  Widget buildText(BuildContext context) {
+    if (description == null)
+      return Text(
+        text,
+        style: Theme.of(context).textTheme.subtitle,
+      );
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        Text(
+          text,
+          style: Theme.of(context).textTheme.subtitle,
+        ),
+        Text(
+          description,
+          style: Theme.of(context).textTheme.body2,
+        ),
+      ],
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -32,10 +53,7 @@ class HomeListItem extends StatelessWidget {
                 width: 50.0,
               ),
             ),
-            Text(
-              text,
-              style: Theme.of(context).textTheme.subtitle,
-            ),
+            buildText(context),
             Spacer(),
             icon ?? Icon(Icons.chevron_right),
           ],

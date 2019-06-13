@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'home_list_item.dart';
+import 'home_list_tile.dart';
 
 const Duration _kExpand = Duration(milliseconds: 200);
 
-class CustomExpansionTile extends StatefulWidget {
-  const CustomExpansionTile({
+class HomeListExpansionTile extends StatefulWidget {
+  const HomeListExpansionTile({
     Key key,
     @required this.asset,
-    @required this.title,
     @required this.text,
+    this.description,
     this.onExpansionChanged,
     this.children = const <Widget>[],
     this.initiallyExpanded = false,
@@ -16,16 +16,16 @@ class CustomExpansionTile extends StatefulWidget {
         super(key: key);
   final String asset;
   final String text;
-  final Widget title;
+  final String description;
   final ValueChanged<bool> onExpansionChanged;
   final List<Widget> children;
   final bool initiallyExpanded;
 
   @override
-  _CustomExpansionTileState createState() => _CustomExpansionTileState();
+  _HomeListExpansionTileState createState() => _HomeListExpansionTileState();
 }
 
-class _CustomExpansionTileState extends State<CustomExpansionTile>
+class _HomeListExpansionTileState extends State<HomeListExpansionTile>
     with SingleTickerProviderStateMixin {
   static final Animatable<double> _easeInTween =
       CurveTween(curve: Curves.easeIn);
@@ -79,9 +79,10 @@ class _CustomExpansionTileState extends State<CustomExpansionTile>
     return Container(
       child: Column(
         children: <Widget>[
-          HomeListItem(
+          HomeListTile(
             asset: widget.asset,
             text: widget.text,
+            description: widget.description,
             icon: RotationTransition(
               turns: _iconTurns,
               child: const Icon(Icons.expand_more),
