@@ -51,6 +51,7 @@ class HomeListTile extends StatelessWidget {
               child: SvgPicture.asset(
                 asset,
                 width: 50.0,
+                height: 50.0,
               ),
             ),
             buildText(context),

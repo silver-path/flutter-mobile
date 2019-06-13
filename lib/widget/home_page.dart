@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'home_list_tile.dart';
-import 'home_list_expansion_tile.dart';
+import 'resource_page.dart';
+import 'app_bar_headline.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -13,54 +14,66 @@ class HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Icon(Icons.home),
+        title: AppBarHeadline(text: 'Home', icon: Icons.home),
       ),
-      body: ListView(
-        scrollDirection: Axis.vertical,
+      body: Column(
         children: <Widget>[
-          HomeListTile(
-            asset: 'assets/kith.svg',
-            text: 'Kiths',
-            description: 'Kithains, Gallains, Thallains, etc',
-            onTap: () {
-              print('kith pressed');
-            },
+          Flexible(
+            flex: 1,
+            child: Padding(
+                padding: EdgeInsets.only(top: 20.0),
+                child: Column(
+                  children: <Widget>[
+                    Text(
+                      'Welcome in Silver Path!',
+                      style: Theme.of(context).textTheme.subtitle,
+                    ),
+                    Text(
+                      'An app dedicated to Changeling:The Dreaming',
+                      style: Theme.of(context).textTheme.body1,
+                    ),
+                    Spacer(),
+                    SvgPicture.asset(
+                      'assets/butterfly.svg',
+                      width: 60.0,
+                      height: 60.0,
+                    ),
+                    Spacer(),
+                    Divider(
+                      height: 1,
+                    ),
+                  ],
+                )),
           ),
-          Divider(),
-          HomeListTile(
-            asset: 'assets/treasure.svg',
-            text: 'Treasures',
-            description: 'Inspiration for Treasures and Dross',
-            onTap: () {
-              print('treasure pressed');
-            },
+          Flexible(
+            flex: 4,
+            child: ListView(
+              scrollDirection: Axis.vertical,
+              children: <Widget>[
+                HomeListTile(
+                  asset: 'assets/chronicle.svg',
+                  text: 'Chronicles',
+                  description: 'Start or continue your adventures',
+                  onTap: () {
+                    print('chronicle pressed');
+                  },
+                ),
+                Divider(),
+                HomeListTile(
+                  asset: 'assets/encyclopedia.svg',
+                  text: 'Resources',
+                  description: 'Everything you need to know',
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ResourcePage()),
+                    );
+                  },
+                ),
+                Divider(),
+              ],
+            ),
           ),
-          Divider(),
-          HomeListExpansionTile(
-            asset: 'assets/dreaming.svg',
-            text: 'The Dreaming',
-            children: <Widget>[
-              Divider(),
-              HomeListTile(
-                asset: 'assets/freehold.svg',
-                text: 'Freeholds',
-                description: 'Enchanted places',
-                onTap: () {
-                  print('freehold pressed');
-                },
-              ),
-              Divider(),
-              HomeListTile(
-                asset: 'assets/glen.svg',
-                text: 'Glens',
-                description: 'Hidden enchanted havens',
-                onTap: () {
-                  print('glen pressed');
-                },
-              ),
-            ],
-          ),
-          Divider(),
         ],
       ),
     );
