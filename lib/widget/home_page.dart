@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'home_list_item.dart';
+import 'home_list_items.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -17,25 +19,36 @@ class HomePageState extends State<HomePage> {
         scrollDirection: Axis.vertical,
         children: <Widget>[
           HomeListItem(
-            asset: 'assets/dreaming.svg',
-            text: 'The Dreaming',
-            onPressed: () {
-              print('dreaming pressed');
-            },
-          ),
-          Divider(
-            color: Colors.black38,
-          ),
-          HomeListItem(
             asset: 'assets/treasure.svg',
             text: 'Treasures',
-            onPressed: () {
+            onTap: () {
               print('treasure pressed');
             },
           ),
-          Divider(
-            color: Colors.black38,
+          Divider(),
+          CustomExpansionTile(
+            asset: 'assets/dreaming.svg',
+            text: 'The Dreaming',
+            children: <Widget>[
+              Divider(),
+              HomeListItem(
+                asset: 'assets/dreaming.svg',
+                text: 'something',
+                onTap: () {
+                  print('something pressed');
+                },
+              ),
+              Divider(),
+              HomeListItem(
+                asset: 'assets/dreaming.svg',
+                text: 'something else',
+                onTap: () {
+                  print('something else pressed');
+                },
+              ),
+            ],
           ),
+          Divider(),
         ],
       ),
     );

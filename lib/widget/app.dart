@@ -7,6 +7,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: 'Silver Path',
       theme: ThemeData(
+        dividerColor: Colors.black45,
         appBarTheme: AppBarTheme(
           elevation: 2.0,
           color: Colors.yellow[200],
