@@ -28,5 +28,8 @@ flutter:
     - family: Meath
       fonts:
       - asset: fonts/Meath.ttf
+    - family: Montserrat
+      fonts:
+      - asset: fonts/Montserrat-Regular.ttf
   assets:
     - assets/
