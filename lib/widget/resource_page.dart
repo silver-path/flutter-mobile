@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'home_list_tile.dart';
 import 'home_list_expansion_tile.dart';
 import 'app_bar_headline.dart';
+import 'kith_page.dart';
 
 class ResourcePage extends StatefulWidget {
   @override
@@ -19,10 +20,15 @@ class ResourcePageState extends State<ResourcePage> {
         scrollDirection: Axis.vertical,
         children: <Widget>[
           HomeListTile(
-            asset: 'assets/kith.svg',
-            text: 'Kiths',
-            description: 'Kithains, Gallains, Thallains, etc',
-          ),
+              asset: 'assets/kith.svg',
+              text: 'Kiths',
+              description: 'Kithains, Gallains, Thallains, etc',
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => KithPage()),
+                );
+              }),
           Divider(),
           HomeListTile(
             asset: 'assets/treasure.svg',

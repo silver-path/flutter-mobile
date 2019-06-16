@@ -15,6 +15,8 @@ class KithService {
             "Hearty, Homey, and Hospitable, the Boggans are fae born of crafters' dreams. They derive pleasure from honest, hard work, whether it be tending the hearth in a freehold or crafting something with their hands. As such, most Boggans take jobs as tradespeople or in freeholds.",
         affinities: [''],
         court: court,
+        decoration:
+            'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
         backgrounds: {
           'seelie': Background(
               url: 'https://ui-ex.com/images/gormander-clipart-jackie-5.jpg',
@@ -32,6 +34,8 @@ class KithService {
             "The Clurichaun are Gallain native to Ireland, although they can be found anywhere that Irish immigrants have made their homes. They once encouraged dreamers to associate them with leprechauns, something they now greatly regret.",
         affinities: [''],
         court: court,
+        decoration:
+            'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
         backgrounds: {
           'seelie': Background(
               url:
@@ -50,6 +54,8 @@ class KithService {
             "Born of dreams of exotic adventure, the ever-travelling Eshu originally hail from Africa, India, the Middle East, and the ancient state of Chaldea. Over the centuries, however, they spread and grew, and now come from all corners of the globe. Known for their tales of adventure and exotic lands, Eshu are charming and regal, having a special talent for weaving a good story.",
         affinities: [''],
         court: court,
+        decoration:
+            'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
         backgrounds: {
           'seelie': Background(
               url:
@@ -69,6 +75,8 @@ class KithService {
             "Nockers are the artisans among the Kithain, able to craft the stuff of dreams into whatever they desire. Their creations are always flawed, however, and their knowledge of this curse makes them irritable and quick to anger.",
         affinities: [''],
         court: court,
+        decoration:
+            'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
         backgrounds: {
           'seelie': Background(
               url:
@@ -88,6 +96,8 @@ class KithService {
             "Solitary and semi-nomadic, the Piskies are a restless kith. They like settling down for a couple years, working and socializing with both mortals and kithain, then moving on to new adventures. They are especially fond of children and tend to befriend youngsters in need of a pal or defender.",
         affinities: [''],
         court: court,
+        decoration:
+            'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
         backgrounds: {
           'seelie': Background(
               url:
@@ -107,6 +117,8 @@ class KithService {
             "Pranksters and comedians, Pooka are well-loved by kithain and mortal alike, but few who know them will ever trust them completely: they are incapable of telling the whole truth. Each is able to take on the form of a specific animal, most often one with a tie to human stories of mischief.",
         affinities: [''],
         court: court,
+        decoration:
+            'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
         backgrounds: {
           'seelie': Background(
               url:
@@ -126,6 +138,8 @@ class KithService {
             "Fear and violence spawn dreams as readily as kings or commoners, and the Redcaps are the kithain most closely tied to nightmares. They gain their name from their traditional headwear - a white cap, dyed red in their victims' blood. They are quick to anger and hungry. Always hungry.",
         affinities: [''],
         court: court,
+        decoration:
+            'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
         backgrounds: {
           'seelie': Background(
               url:
@@ -145,6 +159,8 @@ class KithService {
             "Satyrs are both wise and horny. They enjoy food, wine, philosophy, and the throwes of lust. Passionate to the end, they dive wholeheartedly into all they do, which mostly includes wine and parties. There are those who satiate their desires through the persuit of knowledge, and indeed the Satyrs can be some of the most intelligent of the Kithians with their debates, poetry, and music.",
         affinities: [''],
         court: court,
+        decoration:
+            'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
         backgrounds: {
           'seelie': Background(
               url:
@@ -164,6 +180,8 @@ class KithService {
             "Selkies are neither fae of the Overwater (like most Kithain) nor of the Undersea (like the Merfolk or Morganed), but of the continually shifting shoreline. They are also caught between two forms: seal and human, never precisely one or the other.",
         affinities: [''],
         court: court,
+        decoration:
+            'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
         backgrounds: {
           'seelie': Background(
               url:
@@ -183,6 +201,8 @@ class KithService {
             "Called the underfolk by many, the sluagh (SLOO-ah) are often pariahs even among other fae. Though rumors persist of underground catacombs and mazelike lairs, many sluagh prefer crumbling Victorian mansions to dank sewers. Places dark and forgotten, often with a mushroom garden, attract them.",
         affinities: [''],
         court: court,
+        decoration:
+            'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
         backgrounds: {
           'seelie': Background(
               url:
@@ -202,6 +222,8 @@ class KithService {
             "As long as there have been mountains, there have been trolls. Known as giants, titans, and many other names, no culture does not mention them. Mortal traditions record them as benefactor and enemy and both are correct.",
         affinities: [''],
         court: court,
+        decoration:
+            'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
         backgrounds: {
           'seelie': Background(
               url:
@@ -219,6 +241,7 @@ class KithService {
 //        description: "",
 //        affinities: [''],
 //        court: court,
+//        decoration: decoration,
 //        backgrounds: {
 //          'seelie': Background(
 //              url:
@@ -241,6 +264,8 @@ class KithService {
         description:
             "Boggarts place the well-being of their kind above the concerns of all other creatures. With a talent for getting organized, a very industrious spirit and an endless amount of greed, Boggarts can swarm over any opportunity like a horde of rats. Although they are quite willing to help the Shadow Court, they serve themselves first and foremost.",
         affinities: [''],
+        decoration:
+            'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
         background: Background(
             url:
                 'https://i.pinimg.com/564x/20/e7/7a/20e77a584817d3c5abbe51c324795c86.jpg',

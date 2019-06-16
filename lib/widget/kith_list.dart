@@ -20,9 +20,10 @@ class KithList extends StatelessWidget {
         itemBuilder: (BuildContext context, int index) {
           print('trigger item builder for list with court ${court.toString()}');
           return KithContainer(
-              key: Key(this.kiths[index].name),
-              kith: this.kiths[index],
-              court: court);
+            key: Key(court.toString()),
+            kith: kiths[index],
+            court: court,
+          );
         });
   }
 }
