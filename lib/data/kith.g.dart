@@ -12,7 +12,9 @@ Kithain _$KithainFromJson(Map<String, dynamic> json) {
       icon: json['icon'],
       decoration: json['decoration'],
       court: json['court'],
+      unveiling: json['unveiling'],
       description: json['description'],
+      overview: json['overview'],
       affinities: json['affinities'],
       backgrounds: (json['backgrounds'] as Map<String, dynamic>)?.map(
         (k, e) => MapEntry(k,
@@ -23,7 +25,9 @@ Kithain _$KithainFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$KithainToJson(Kithain instance) => <String, dynamic>{
       'name': instance.name,
       'icon': instance.icon,
+      'unveiling': instance.unveiling,
       'description': instance.description,
+      'overview': instance.overview,
       'decoration': instance.decoration,
       'court': _$CourtEnumMap[instance.court],
       'affinities': instance.affinities,
@@ -41,7 +45,9 @@ Thallain _$ThallainFromJson(Map<String, dynamic> json) {
       name: json['name'],
       icon: json['icon'],
       decoration: json['decoration'],
+      unveiling: json['unveiling'],
       description: json['description'],
+      overview: json['overview'],
       affinities: json['affinities'],
       background: json['background'] == null
           ? null
@@ -52,7 +58,9 @@ Thallain _$ThallainFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$ThallainToJson(Thallain instance) => <String, dynamic>{
       'name': instance.name,
       'icon': instance.icon,
+      'unveiling': instance.unveiling,
       'description': instance.description,
+      'overview': instance.overview,
       'decoration': instance.decoration,
       'court': _$CourtEnumMap[instance.court],
       'affinities': instance.affinities,

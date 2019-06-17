@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced_networkimage/provider.dart';
+import 'package:flutter_advanced_networkimage/transition.dart';
 import '../data/kith.dart';
 import '../data/court.dart';
 
@@ -20,15 +21,18 @@ class KithCardFront extends StatelessWidget {
           child: Column(
             children: <Widget>[
               Container(
-                child: Image(
+                height: MediaQuery.of(context).size.height / 2,
+                child: TransitionToImage(
                   image: AdvancedNetworkImage(
                     kith.display(court).url,
                     useDiskCache: true,
-                    cacheRule: CacheRule(maxAge: const Duration(days: 7)),
+                    cacheRule: CacheRule(
+                      maxAge: const Duration(seconds: 1),
+                    ),
                   ),
-                  height: MediaQuery.of(context).size.height / 2,
                   fit: BoxFit.fitHeight,
                   alignment: Alignment.topCenter,
+                  placeholder: CircularProgressIndicator(),
                 ),
               ),
               Divider(
@@ -61,7 +65,7 @@ class KithCardFront extends StatelessWidget {
                       height: 10.0,
                     ),
                     Text(
-                      kith.description,
+                      kith.unveiling,
                     ),
                   ],
                 ),

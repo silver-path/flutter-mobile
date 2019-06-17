@@ -11,12 +11,17 @@ class KithService {
         name: 'Boggan',
         icon:
             'https://vignette.wikia.nocookie.net/whitewolf/images/5/52/LogoKithBoggans.png/revision/latest/scale-to-width-down/200?cb=20150325195152',
-        description:
+        unveiling:
             "Hearty, Homey, and Hospitable, the Boggans are fae born of crafters' dreams. They derive pleasure from honest, hard work, whether it be tending the hearth in a freehold or crafting something with their hands. As such, most Boggans take jobs as tradespeople or in freeholds.",
         affinities: [''],
         court: court,
         decoration:
             'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
+        description: "Boggans are born of dreams of hearth and home. If roads go ever on, the goal is always the return. They derive their greatest pleasures from work and a job well done. Honest work, good company, and a regular routine are all they need. Of all the Kithain they are known for their honesty and integrity. It is said they are as honest as the dirt under their fingernails.",
+        overview: """There’s a little bit of boggan in everyone.
+Everyone likes to learn a secret, or to tell one; even the freest of spirits needs a place to return to between one journey and the next. Boggans thrive in these spaces, in the comfort of home, and the bonds between friends. Dreams of an honest day’s work and a cozy living provided by it, this kith has long enjoyed helping those who appreciate their efforts. Whether finishing a craftsman’s work at the end of a long day, completing the chores of a busy housekeeper, or bringing together unlikely friendships and romances, tales of mysterious folk helping others are the heart and soul of boggan history.
+
+While not exactly shy, boggans work best just out of notice. Tracing their history often involves looking just behind or to the side of the spotlight, but with a sufficiently practiced eye, picking out the patterns of a boggan’s helping hand is easy. Humble creatures, they often prefer to highlight the efforts of others. They might not speak directly of their influence, but they are always eager to tell the story, and usually have it firsthand. Even if they aren’t the main character of the story, there’s usually a boggan in the room where it happened.""",
         backgrounds: {
           'seelie': Background(
               url: 'https://ui-ex.com/images/gormander-clipart-jackie-5.jpg',
@@ -30,12 +35,14 @@ class KithService {
         name: 'Clurichaun',
         icon:
             'https://vignette.wikia.nocookie.net/whitewolf/images/b/bc/KithClurichaun.png/revision/latest/scale-to-width-down/200?cb=20170503121058',
-        description:
+        unveiling:
             "The Clurichaun are Gallain native to Ireland, although they can be found anywhere that Irish immigrants have made their homes. They once encouraged dreamers to associate them with leprechauns, something they now greatly regret.",
         affinities: [''],
         court: court,
         decoration:
             'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
+        description: "",
+        overview: "",
         backgrounds: {
           'seelie': Background(
               url:
@@ -50,12 +57,14 @@ class KithService {
         name: 'Eshu',
         icon:
             'https://vignette.wikia.nocookie.net/whitewolf/images/1/12/LogoKithEshu.png/revision/latest/scale-to-width-down/200?cb=20150325195304',
-        description:
+        unveiling:
             "Born of dreams of exotic adventure, the ever-travelling Eshu originally hail from Africa, India, the Middle East, and the ancient state of Chaldea. Over the centuries, however, they spread and grew, and now come from all corners of the globe. Known for their tales of adventure and exotic lands, Eshu are charming and regal, having a special talent for weaving a good story.",
         affinities: [''],
         court: court,
         decoration:
             'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
+        description: "",
+        overview: "",
         backgrounds: {
           'seelie': Background(
               url:
@@ -71,12 +80,14 @@ class KithService {
         name: 'Nocker',
         icon:
             'https://vignette.wikia.nocookie.net/whitewolf/images/3/38/LogoKithNockers.png/revision/latest/scale-to-width-down/200?cb=20150325195454',
-        description:
+        unveiling:
             "Nockers are the artisans among the Kithain, able to craft the stuff of dreams into whatever they desire. Their creations are always flawed, however, and their knowledge of this curse makes them irritable and quick to anger.",
         affinities: [''],
         court: court,
         decoration:
             'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
+        description: "",
+        overview: "",
         backgrounds: {
           'seelie': Background(
               url:
@@ -92,12 +103,14 @@ class KithService {
         name: 'Piskey',
         icon:
             'https://vignette.wikia.nocookie.net/whitewolf/images/8/86/KithPiskey.png/revision/latest/scale-to-width-down/200?cb=20170503121514',
-        description:
+        unveiling:
             "Solitary and semi-nomadic, the Piskies are a restless kith. They like settling down for a couple years, working and socializing with both mortals and kithain, then moving on to new adventures. They are especially fond of children and tend to befriend youngsters in need of a pal or defender.",
         affinities: [''],
         court: court,
         decoration:
             'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
+        description: "",
+        overview: "",
         backgrounds: {
           'seelie': Background(
               url:
@@ -113,12 +126,14 @@ class KithService {
         name: 'Pookah',
         icon:
             'https://vignette.wikia.nocookie.net/whitewolf/images/d/d6/LogoKithPooka.png/revision/latest/scale-to-width-down/200?cb=20150325195621',
-        description:
+        unveiling:
             "Pranksters and comedians, Pooka are well-loved by kithain and mortal alike, but few who know them will ever trust them completely: they are incapable of telling the whole truth. Each is able to take on the form of a specific animal, most often one with a tie to human stories of mischief.",
         affinities: [''],
         court: court,
         decoration:
             'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
+        description: "",
+        overview: "",
         backgrounds: {
           'seelie': Background(
               url:
@@ -134,12 +149,14 @@ class KithService {
         name: 'Redcap',
         icon:
             'https://vignette.wikia.nocookie.net/whitewolf/images/f/fd/LogoKithRedcaps.png/revision/latest/scale-to-width-down/200?cb=20150325195705',
-        description:
+        unveiling:
             "Fear and violence spawn dreams as readily as kings or commoners, and the Redcaps are the kithain most closely tied to nightmares. They gain their name from their traditional headwear - a white cap, dyed red in their victims' blood. They are quick to anger and hungry. Always hungry.",
         affinities: [''],
         court: court,
         decoration:
             'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
+        description: "",
+        overview: "",
         backgrounds: {
           'seelie': Background(
               url:
@@ -155,12 +172,14 @@ class KithService {
         name: 'Satyr',
         icon:
             'https://vignette.wikia.nocookie.net/whitewolf/images/6/6a/KithSatyr.png/revision/latest/scale-to-width-down/150?cb=20150325195752',
-        description:
+        unveiling:
             "Satyrs are both wise and horny. They enjoy food, wine, philosophy, and the throwes of lust. Passionate to the end, they dive wholeheartedly into all they do, which mostly includes wine and parties. There are those who satiate their desires through the persuit of knowledge, and indeed the Satyrs can be some of the most intelligent of the Kithians with their debates, poetry, and music.",
         affinities: [''],
         court: court,
         decoration:
             'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
+        description: "",
+        overview: "",
         backgrounds: {
           'seelie': Background(
               url:
@@ -176,12 +195,14 @@ class KithService {
         name: 'Selkie',
         icon:
             'https://vignette.wikia.nocookie.net/whitewolf/images/3/3c/KithSelkie.png/revision/latest/scale-to-width-down/200?cb=20170503121946',
-        description:
+        unveiling:
             "Selkies are neither fae of the Overwater (like most Kithain) nor of the Undersea (like the Merfolk or Morganed), but of the continually shifting shoreline. They are also caught between two forms: seal and human, never precisely one or the other.",
         affinities: [''],
         court: court,
         decoration:
             'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
+        description: "",
+        overview: "",
         backgrounds: {
           'seelie': Background(
               url:
@@ -197,12 +218,14 @@ class KithService {
         name: 'Sluagh',
         icon:
             'https://vignette.wikia.nocookie.net/whitewolf/images/b/b4/LogoKithSluagh.png/revision/latest/scale-to-width-down/200?cb=20150325195943',
-        description:
+        unveiling:
             "Called the underfolk by many, the sluagh (SLOO-ah) are often pariahs even among other fae. Though rumors persist of underground catacombs and mazelike lairs, many sluagh prefer crumbling Victorian mansions to dank sewers. Places dark and forgotten, often with a mushroom garden, attract them.",
         affinities: [''],
         court: court,
         decoration:
             'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
+        description: "",
+        overview: "",
         backgrounds: {
           'seelie': Background(
               url:
@@ -218,12 +241,14 @@ class KithService {
         name: 'Troll',
         icon:
             'https://vignette.wikia.nocookie.net/whitewolf/images/6/67/LogoKithTroll.png/revision/latest/scale-to-width-down/200?cb=20150325200048',
-        description:
+        unveiling:
             "As long as there have been mountains, there have been trolls. Known as giants, titans, and many other names, no culture does not mention them. Mortal traditions record them as benefactor and enemy and both are correct.",
         affinities: [''],
         court: court,
         decoration:
             'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
+        description: "",
+        overview: "",
         backgrounds: {
           'seelie': Background(
               url:
@@ -238,10 +263,12 @@ class KithService {
 //      Kithain(
 //        name: '',
 //        icon: '',
-//        description: "",
+//        unveiling: "",
 //        affinities: [''],
 //        court: court,
 //        decoration: decoration,
+//        description: "",
+//        overview: "",
 //        backgrounds: {
 //          'seelie': Background(
 //              url:
@@ -261,11 +288,13 @@ class KithService {
         name: 'Boggart',
         icon:
             'https://vignette.wikia.nocookie.net/whitewolf/images/5/52/LogoKithBoggans.png/revision/latest/scale-to-width-down/200?cb=20150325195152',
-        description:
+        unveiling:
             "Boggarts place the well-being of their kind above the concerns of all other creatures. With a talent for getting organized, a very industrious spirit and an endless amount of greed, Boggarts can swarm over any opportunity like a horde of rats. Although they are quite willing to help the Shadow Court, they serve themselves first and foremost.",
         affinities: [''],
         decoration:
             'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
+        description: "",
+        overview: "",
         background: Background(
             url:
                 'https://i.pinimg.com/564x/20/e7/7a/20e77a584817d3c5abbe51c324795c86.jpg',

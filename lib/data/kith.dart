@@ -13,7 +13,9 @@ abstract class Kith implements Displayable {
   final String name;
   final String icon;
   final String kith;
+  final String unveiling;
   final String description;
+  final String overview;
   final String decoration;
   final Court court;
   final List<String> affinities;
@@ -22,7 +24,9 @@ abstract class Kith implements Displayable {
     @required this.name,
     @required this.icon,
     @required this.kith,
+    @required this.unveiling,
     @required this.description,
+    @required this.overview,
     @required this.decoration,
     @required this.court,
     @required this.affinities,
@@ -38,7 +42,9 @@ class Kithain extends Kith {
     @required icon,
     @required decoration,
     @required court,
+    @required unveiling,
     @required description,
+    @required overview,
     @required affinities,
     @required this.backgrounds,
   })  : assert(backgrounds.containsKey('seelie')),
@@ -47,7 +53,9 @@ class Kithain extends Kith {
           name: name,
           icon: icon,
           kith: 'kithain',
+          unveiling: unveiling,
           description: description,
+          overview: overview,
           decoration: decoration,
           court: court,
           affinities: affinities,
@@ -71,7 +79,9 @@ class Thallain extends Kith {
     @required name,
     @required icon,
     @required decoration,
+    @required unveiling,
     @required description,
+    @required overview,
     @required affinities,
     @required this.background,
     court: Court.shadow,
@@ -79,7 +89,9 @@ class Thallain extends Kith {
           name: name,
           icon: icon,
           kith: 'thallain',
+          unveiling: unveiling,
           description: description,
+          overview: overview,
           decoration: decoration,
           court: court,
           affinities: affinities,
