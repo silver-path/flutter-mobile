@@ -13,17 +13,15 @@ class KithList extends StatelessWidget {
   Widget build(BuildContext context) {
     print('build list with court ${court.toString()}');
     return ListView.builder(
-        key: Key(court.toString()),
-        scrollDirection: Axis.horizontal,
-        padding: EdgeInsets.only(bottom: 48),
-        itemCount: this.kiths.length,
-        itemBuilder: (BuildContext context, int index) {
-          print('trigger item builder for list with court ${court.toString()}');
-          return KithContainer(
-            key: Key(court.toString()),
-            kith: kiths[index],
-            court: court,
-          );
-        });
+      scrollDirection: Axis.horizontal,
+      itemCount: this.kiths.length,
+      itemBuilder: (BuildContext context, int index) {
+        print('trigger item builder for list with court ${court.toString()}');
+        return KithContainer(
+          kith: kiths[index],
+          court: court,
+        );
+      },
+    );
   }
 }

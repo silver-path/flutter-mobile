@@ -19,16 +19,24 @@ class ResourcePageState extends State<ResourcePage> {
       body: ListView(
         scrollDirection: Axis.vertical,
         children: <Widget>[
-          HomeListTile(
-              asset: 'assets/kith.svg',
-              text: 'Kiths',
-              description: 'Kithains, Gallains, Thallains, etc',
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => KithPage()),
-                );
-              }),
+          HomeListExpansionTile(
+            asset: 'assets/butterfly.svg',
+            text: 'Kiths',
+            description: 'All kind of faeries',
+            children: <Widget>[
+              HomeListTile(
+                asset: 'assets/kith.svg',
+                text: 'Kithains',
+                description: 'Kithains, Gallains',
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => KithPage()),
+                  );
+                },
+              ),
+            ],
+          ),
           Divider(),
           HomeListTile(
             asset: 'assets/treasure.svg',

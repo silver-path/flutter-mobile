@@ -20,28 +20,41 @@ class App extends StatelessWidget {
           color: Colors.black45,
           size: 32.0,
         ),
-        fontFamily: 'Montserrat',
         textTheme: TextTheme(
           headline: TextStyle(
             fontSize: 72.0,
             fontWeight: FontWeight.bold,
+            fontFamily: 'Montserrat',
           ),
           subhead: TextStyle(
             fontSize: 48.0,
             fontWeight: FontWeight.bold,
+            fontFamily: 'Montserrat',
           ),
           title: TextStyle(
             fontSize: 36.0,
+            fontWeight: FontWeight.bold,
+            fontFamily: 'Meath',
+            color: Colors.black87,
           ),
           subtitle: TextStyle(
             fontSize: 24.0,
+            fontFamily: 'Montserrat',
+          ),
+          display1: TextStyle(
+            fontSize: 14.0,
+            fontFamily: 'Montserrat',
+            fontWeight: FontWeight.bold,
+            color: Colors.black87,
           ),
           body1: TextStyle(
             fontSize: 14.0,
+            fontFamily: 'Montserrat',
           ),
           body2: TextStyle(
             fontSize: 12.0,
             fontStyle: FontStyle.italic,
+            fontFamily: 'Montserrat',
           ),
         ),
       ),

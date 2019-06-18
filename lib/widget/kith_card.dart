@@ -19,7 +19,6 @@ class AnimationCard extends StatelessWidget {
       animation: animation,
       builder: (BuildContext context, Widget child) {
         var transform = Matrix4.identity();
-//        transform.setEntry(3, 2, 0.001);
         if (direction == FlipDirection.VERTICAL) {
           transform.rotateX(animation.value);
         } else {
@@ -48,12 +47,12 @@ class FlipCard extends StatefulWidget {
 
   const FlipCard(
       {Key key,
-        @required this.front,
-        @required this.back,
-        this.speed = 500,
-        this.onFlip,
-        this.direction = FlipDirection.HORIZONTAL,
-        this.flipOnTouch = true})
+      @required this.front,
+      @required this.back,
+      this.speed = 500,
+      this.onFlip,
+      this.direction = FlipDirection.HORIZONTAL,
+      this.flipOnTouch = true})
       : super(key: key);
 
   @override

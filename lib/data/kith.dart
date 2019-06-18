@@ -17,7 +17,6 @@ abstract class Kith implements Displayable {
   final String description;
   final String overview;
   final String decoration;
-  final Court court;
   final List<String> affinities;
 
   Kith({
@@ -28,7 +27,6 @@ abstract class Kith implements Displayable {
     @required this.description,
     @required this.overview,
     @required this.decoration,
-    @required this.court,
     @required this.affinities,
   });
 }
@@ -41,7 +39,6 @@ class Kithain extends Kith {
     @required name,
     @required icon,
     @required decoration,
-    @required court,
     @required unveiling,
     @required description,
     @required overview,
@@ -57,7 +54,6 @@ class Kithain extends Kith {
           description: description,
           overview: overview,
           decoration: decoration,
-          court: court,
           affinities: affinities,
         );
 
@@ -93,7 +89,6 @@ class Thallain extends Kith {
           description: description,
           overview: overview,
           decoration: decoration,
-          court: court,
           affinities: affinities,
         );
 

@@ -1,11 +1,10 @@
 import 'dart:math';
 import '../data/kith.dart';
-import '../data/court.dart';
 import '../data/background.dart';
 import 'dart:async';
 
 class KithService {
-  Future<List<Kithain>> kithains(Court court) async {
+  Future<List<Kithain>> kithains() async {
     return [
       Kithain(
         name: 'Boggan',
@@ -14,10 +13,10 @@ class KithService {
         unveiling:
             "Hearty, Homey, and Hospitable, the Boggans are fae born of crafters' dreams. They derive pleasure from honest, hard work, whether it be tending the hearth in a freehold or crafting something with their hands. As such, most Boggans take jobs as tradespeople or in freeholds.",
         affinities: [''],
-        court: court,
         decoration:
             'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
-        description: "Boggans are born of dreams of hearth and home. If roads go ever on, the goal is always the return. They derive their greatest pleasures from work and a job well done. Honest work, good company, and a regular routine are all they need. Of all the Kithain they are known for their honesty and integrity. It is said they are as honest as the dirt under their fingernails.",
+        description:
+            "Boggans are born of dreams of hearth and home. If roads go ever on, the goal is always the return. They derive their greatest pleasures from work and a job well done. Honest work, good company, and a regular routine are all they need. Of all the Kithain they are known for their honesty and integrity. It is said they are as honest as the dirt under their fingernails.",
         overview: """There’s a little bit of boggan in everyone.
 Everyone likes to learn a secret, or to tell one; even the freest of spirits needs a place to return to between one journey and the next. Boggans thrive in these spaces, in the comfort of home, and the bonds between friends. Dreams of an honest day’s work and a cozy living provided by it, this kith has long enjoyed helping those who appreciate their efforts. Whether finishing a craftsman’s work at the end of a long day, completing the chores of a busy housekeeper, or bringing together unlikely friendships and romances, tales of mysterious folk helping others are the heart and soul of boggan history.
 
@@ -27,7 +26,8 @@ While not exactly shy, boggans work best just out of notice. Tracing their histo
               url: 'https://ui-ex.com/images/gormander-clipart-jackie-5.jpg',
               position: Point(0.0, -0.8)),
           'unseelie': Background(
-              url: 'https://pbs.twimg.com/media/DpvTXLNWwAoE0cw.jpg',
+              url:
+                  'https://i.pinimg.com/564x/16/f5/f1/16f5f1aac3904ca272f7480b27697256.jpg',
               position: Point(-0.3, -1.0)),
         },
       ),
@@ -38,11 +38,10 @@ While not exactly shy, boggans work best just out of notice. Tracing their histo
         unveiling:
             "The Clurichaun are Gallain native to Ireland, although they can be found anywhere that Irish immigrants have made their homes. They once encouraged dreamers to associate them with leprechauns, something they now greatly regret.",
         affinities: [''],
-        court: court,
         decoration:
             'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
-        description: "",
-        overview: "",
+        description: null,
+        overview: null,
         backgrounds: {
           'seelie': Background(
               url:
@@ -60,11 +59,10 @@ While not exactly shy, boggans work best just out of notice. Tracing their histo
         unveiling:
             "Born of dreams of exotic adventure, the ever-travelling Eshu originally hail from Africa, India, the Middle East, and the ancient state of Chaldea. Over the centuries, however, they spread and grew, and now come from all corners of the globe. Known for their tales of adventure and exotic lands, Eshu are charming and regal, having a special talent for weaving a good story.",
         affinities: [''],
-        court: court,
         decoration:
             'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
-        description: "",
-        overview: "",
+        description: null,
+        overview: null,
         backgrounds: {
           'seelie': Background(
               url:
@@ -83,11 +81,10 @@ While not exactly shy, boggans work best just out of notice. Tracing their histo
         unveiling:
             "Nockers are the artisans among the Kithain, able to craft the stuff of dreams into whatever they desire. Their creations are always flawed, however, and their knowledge of this curse makes them irritable and quick to anger.",
         affinities: [''],
-        court: court,
         decoration:
             'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
-        description: "",
-        overview: "",
+        description: null,
+        overview: null,
         backgrounds: {
           'seelie': Background(
               url:
@@ -106,11 +103,10 @@ While not exactly shy, boggans work best just out of notice. Tracing their histo
         unveiling:
             "Solitary and semi-nomadic, the Piskies are a restless kith. They like settling down for a couple years, working and socializing with both mortals and kithain, then moving on to new adventures. They are especially fond of children and tend to befriend youngsters in need of a pal or defender.",
         affinities: [''],
-        court: court,
         decoration:
             'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
-        description: "",
-        overview: "",
+        description: null,
+        overview: null,
         backgrounds: {
           'seelie': Background(
               url:
@@ -129,11 +125,10 @@ While not exactly shy, boggans work best just out of notice. Tracing their histo
         unveiling:
             "Pranksters and comedians, Pooka are well-loved by kithain and mortal alike, but few who know them will ever trust them completely: they are incapable of telling the whole truth. Each is able to take on the form of a specific animal, most often one with a tie to human stories of mischief.",
         affinities: [''],
-        court: court,
         decoration:
             'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
-        description: "",
-        overview: "",
+        description: null,
+        overview: null,
         backgrounds: {
           'seelie': Background(
               url:
@@ -152,11 +147,10 @@ While not exactly shy, boggans work best just out of notice. Tracing their histo
         unveiling:
             "Fear and violence spawn dreams as readily as kings or commoners, and the Redcaps are the kithain most closely tied to nightmares. They gain their name from their traditional headwear - a white cap, dyed red in their victims' blood. They are quick to anger and hungry. Always hungry.",
         affinities: [''],
-        court: court,
         decoration:
             'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
-        description: "",
-        overview: "",
+        description: null,
+        overview: null,
         backgrounds: {
           'seelie': Background(
               url:
@@ -175,11 +169,10 @@ While not exactly shy, boggans work best just out of notice. Tracing their histo
         unveiling:
             "Satyrs are both wise and horny. They enjoy food, wine, philosophy, and the throwes of lust. Passionate to the end, they dive wholeheartedly into all they do, which mostly includes wine and parties. There are those who satiate their desires through the persuit of knowledge, and indeed the Satyrs can be some of the most intelligent of the Kithians with their debates, poetry, and music.",
         affinities: [''],
-        court: court,
         decoration:
             'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
-        description: "",
-        overview: "",
+        description: null,
+        overview: null,
         backgrounds: {
           'seelie': Background(
               url:
@@ -198,11 +191,10 @@ While not exactly shy, boggans work best just out of notice. Tracing their histo
         unveiling:
             "Selkies are neither fae of the Overwater (like most Kithain) nor of the Undersea (like the Merfolk or Morganed), but of the continually shifting shoreline. They are also caught between two forms: seal and human, never precisely one or the other.",
         affinities: [''],
-        court: court,
         decoration:
             'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
-        description: "",
-        overview: "",
+        description: null,
+        overview: null,
         backgrounds: {
           'seelie': Background(
               url:
@@ -215,17 +207,39 @@ While not exactly shy, boggans work best just out of notice. Tracing their histo
         },
       ),
       Kithain(
+        name: 'Sidhe',
+        icon:
+            'https://vignette.wikia.nocookie.net/whitewolf/images/c/cf/LogoKithSidhe.png/revision/latest?cb=20150325195829',
+        unveiling:
+            "The Sidhe are the kith born of the dreams of kings and queens - both noble and otherwise. Regal, beautiful and graceful, they are power and coldness personified. They are tied intimately to the Dreaming and are new to the Changeling Way; most of the Sidhe on Earth are either exiles or escapees from Arcadia, unable to return home.",
+        affinities: [''],
+        decoration:
+            'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
+        description:
+            "The Sidhe are the kith born of the dreams of kings and queens - both noble and otherwise. Regal, beautiful and graceful, they are power and coldness personified. They are tied intimately to the Dreaming and are new to the Changeling Way; most of the Sidhe on Earth are either exiles or escapees from Arcadia, unable to return home. As a result, they feel the cold sting of Banality far more harshly than commoner kithain, but they still command both the Seelie and Unseelie courts and are determined to survive the coming of Winter.",
+        overview: null,
+        backgrounds: {
+          'seelie': Background(
+              url:
+                  'https://i.pinimg.com/564x/4a/4e/09/4a4e097f9a92213fdbba1585aca11d09.jpg',
+              position: Point(-0.15, -1.0)),
+          'unseelie': Background(
+              url:
+                  'https://i.pinimg.com/564x/78/d3/48/78d348b3e8041fc611ec6ca4168609b6.jpg',
+              position: Point(-0.8, -1.0)),
+        },
+      ),
+      Kithain(
         name: 'Sluagh',
         icon:
             'https://vignette.wikia.nocookie.net/whitewolf/images/b/b4/LogoKithSluagh.png/revision/latest/scale-to-width-down/200?cb=20150325195943',
         unveiling:
             "Called the underfolk by many, the sluagh (SLOO-ah) are often pariahs even among other fae. Though rumors persist of underground catacombs and mazelike lairs, many sluagh prefer crumbling Victorian mansions to dank sewers. Places dark and forgotten, often with a mushroom garden, attract them.",
         affinities: [''],
-        court: court,
         decoration:
             'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
-        description: "",
-        overview: "",
+        description: null,
+        overview: null,
         backgrounds: {
           'seelie': Background(
               url:
@@ -244,11 +258,10 @@ While not exactly shy, boggans work best just out of notice. Tracing their histo
         unveiling:
             "As long as there have been mountains, there have been trolls. Known as giants, titans, and many other names, no culture does not mention them. Mortal traditions record them as benefactor and enemy and both are correct.",
         affinities: [''],
-        court: court,
         decoration:
             'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
-        description: "",
-        overview: "",
+        description: null,
+        overview: null,
         backgrounds: {
           'seelie': Background(
               url:
@@ -267,8 +280,8 @@ While not exactly shy, boggans work best just out of notice. Tracing their histo
 //        affinities: [''],
 //        court: court,
 //        decoration: decoration,
-//        description: "",
-//        overview: "",
+//        description: null,
+//        overview: null,
 //        backgrounds: {
 //          'seelie': Background(
 //              url:
@@ -293,8 +306,8 @@ While not exactly shy, boggans work best just out of notice. Tracing their histo
         affinities: [''],
         decoration:
             'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
-        description: "",
-        overview: "",
+        description: null,
+        overview: null,
         background: Background(
             url:
                 'https://i.pinimg.com/564x/20/e7/7a/20e77a584817d3c5abbe51c324795c86.jpg',
@@ -303,9 +316,8 @@ While not exactly shy, boggans work best just out of notice. Tracing their histo
     ];
   }
 
-  Future<List<Kith>> fetch(Court court) async {
-    final List<Kithain> kithains = await this.kithains(court);
-    if (court != Court.shadow) return kithains;
+  Future<List<Kith>> kiths() async {
+    final List<Kithain> kithains = await this.kithains();
     final List<Thallain> thallains = await this.thallains();
     return [kithains, thallains].expand((x) => x).toList()
       ..sort((Kith a, Kith b) =>

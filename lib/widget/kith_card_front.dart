@@ -12,74 +12,82 @@ class KithCardFront extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      bottom: false,
-      child: Card(
-        margin: EdgeInsets.all(10.0),
-        elevation: 1.0,
-        child: Container(
-          child: Column(
-            children: <Widget>[
-              Container(
-                height: MediaQuery.of(context).size.height / 2,
-                child: TransitionToImage(
-                  image: AdvancedNetworkImage(
-                    kith.display(court).url,
-                    useDiskCache: true,
-                    cacheRule: CacheRule(
-                      maxAge: const Duration(seconds: 1),
-                    ),
+    return Card(
+      margin: EdgeInsets.all(10.0),
+      elevation: 1.0,
+      child: Container(
+        child: Column(
+          children: <Widget>[
+            Container(
+              height: MediaQuery.of(context).size.height * .5,
+              child: TransitionToImage(
+                image: AdvancedNetworkImage(
+                  kith.display(court).url,
+                  useDiskCache: true,
+                  cacheRule: CacheRule(
+                    maxAge: const Duration(seconds: 1),
                   ),
-                  fit: BoxFit.fitHeight,
-                  alignment: Alignment.topCenter,
-                  placeholder: CircularProgressIndicator(),
+                ),
+                fit: BoxFit.fitHeight,
+                alignment: Alignment.topCenter,
+                enableRefresh: true,
+                key: Key(court.toString()),
+                placeholder: Center(
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      Icon(Icons.error),
+                      SizedBox(
+                        width: 10.0,
+                      ),
+                      Text('could not load image')
+                    ],
+                  ),
                 ),
               ),
-              Divider(
-                height: 1.0,
-              ),
-              Padding(
-                padding: EdgeInsets.all(20.0),
-                child: Column(
-                  children: <Widget>[
-                    Row(
-                      children: <Widget>[
-                        Image.network(
-                          this.kith.icon,
-                          fit: BoxFit.fitHeight,
-                          height: 50,
+            ),
+            Divider(
+              height: 1.0,
+            ),
+            Padding(
+              padding: EdgeInsets.all(20.0),
+              child: Column(
+                children: <Widget>[
+                  Row(
+                    children: <Widget>[
+                      Image.network(
+                        this.kith.icon,
+                        fit: BoxFit.fitHeight,
+                        height: 50,
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 10),
+                        child: Text(
+                          this.kith.name,
+                          style: Theme.of(context).textTheme.title,
                         ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 10),
-                          child: Text(
-                            this.kith.name,
-                            style: TextStyle(
-                                fontSize: 36.0,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: "Meath"),
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 10.0,
-                    ),
-                    Text(
-                      kith.unveiling,
-                    ),
-                  ],
-                ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 10.0,
+                  ),
+                  Text(
+                    kith.unveiling,
+                    maxLines: 3,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ],
               ),
-              Spacer(),
-              Padding(
-                padding: EdgeInsets.only(bottom: 20.0),
-                child: Text(
-                  'click for more details',
-                  style: TextStyle(color: Colors.grey),
-                ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(bottom: 20.0),
+              child: Text(
+                'click for more details',
+                style: TextStyle(color: Colors.grey),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
