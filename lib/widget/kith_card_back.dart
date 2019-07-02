@@ -1,12 +1,32 @@
 import 'package:flutter/material.dart';
 import '../data/kith.dart';
 import '../data/court.dart';
+import '../core/string_helper.dart';
 
 class KithCardBack extends StatelessWidget {
   final Kith kith;
   final Court court;
 
   KithCardBack({@required this.kith, @required this.court});
+
+  Column buildHistory (BuildContext context, Kith kith) {
+    List<Widget> list = [
+      Text('History',style: Theme.of(context).textTheme.display1),
+      SizedBox(height: 10.0),
+    ];
+    if (kith.history != null) {
+      for (var details in kith.history) {
+        list.add(Text(StringHelper.capitalize(details.title),style: Theme.of(context).textTheme.display2));
+        list.add(SizedBox(height: 10.0));
+        list.add(Text(details.content,style: Theme.of(context).textTheme.body1));
+        list.add(SizedBox(height: 10.0));
+      }
+    } else list.add(Text('...',style: Theme.of(context).textTheme.body1));
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: list,
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -80,6 +100,10 @@ class KithCardBack extends StatelessWidget {
               Text(
                 kith.overview ?? '...',
               ),
+              SizedBox(
+                height: 10.0,
+              ),
+              buildHistory(context, kith),
             ],
           ),
         ),

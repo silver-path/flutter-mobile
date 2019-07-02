@@ -2,6 +2,8 @@ import 'package:flutter/foundation.dart';
 import 'package:json_annotation/json_annotation.dart';
 import './court.dart';
 import './background.dart';
+import 'history.dart';
+import 'historical_detail.dart';
 
 part 'kith.g.dart';
 
@@ -9,7 +11,7 @@ class Displayable {
   Background display(Court court) => null;
 }
 
-abstract class Kith implements Displayable {
+abstract class Kith implements Displayable, History {
   final String name;
   final String icon;
   final String kith;
@@ -18,6 +20,7 @@ abstract class Kith implements Displayable {
   final String overview;
   final String decoration;
   final String affinity;
+  final List<HistoricalDetail> history;
 
   Kith({
     @required this.name,
@@ -28,7 +31,11 @@ abstract class Kith implements Displayable {
     @required this.overview,
     @required this.decoration,
     @required this.affinity,
+    @required this.history,
   });
+
+  @override
+  List get props => [name];
 }
 
 @JsonSerializable()
@@ -44,6 +51,7 @@ class Kithain extends Kith {
     @required overview,
     @required affinity,
     @required this.backgrounds,
+    @required history,
   })  : assert(backgrounds.containsKey('seelie')),
         assert(backgrounds.containsKey('unseelie')),
         super(
@@ -55,6 +63,7 @@ class Kithain extends Kith {
           overview: overview,
           decoration: decoration,
           affinity: affinity,
+          history: history,
         );
 
   factory Kithain.fromJson(Map<String, dynamic> json) =>
@@ -80,6 +89,7 @@ class Thallain extends Kith {
     @required overview,
     @required affinity,
     @required this.background,
+    @required history,
     court: Court.shadow,
   }) : super(
           name: name,
@@ -90,6 +100,7 @@ class Thallain extends Kith {
           overview: overview,
           decoration: decoration,
           affinity: affinity,
+          history: history,
         );
 
   factory Thallain.fromJson(Map<String, dynamic> json) =>

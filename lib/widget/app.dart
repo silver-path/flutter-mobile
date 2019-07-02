@@ -47,6 +47,12 @@ class App extends StatelessWidget {
             fontWeight: FontWeight.bold,
             color: Colors.black87,
           ),
+          display2: TextStyle(
+            fontSize: 14.0,
+            fontFamily: 'Montserrat',
+            fontWeight: FontWeight.bold,
+            color: Colors.black38,
+          ),
           body1: TextStyle(
             fontSize: 14.0,
             fontFamily: 'Montserrat',
