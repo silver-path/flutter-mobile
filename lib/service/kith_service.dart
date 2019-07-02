@@ -11,12 +11,12 @@ class KithService {
         icon:
             'https://vignette.wikia.nocookie.net/whitewolf/images/5/52/LogoKithBoggans.png/revision/latest/scale-to-width-down/200?cb=20150325195152',
         unveiling:
-            "Hearty, Homey, and Hospitable, the Boggans are fae born of crafters' dreams. They derive pleasure from honest, hard work, whether it be tending the hearth in a freehold or crafting something with their hands. As such, most Boggans take jobs as tradespeople or in freeholds.",
-        affinities: [''],
+        """Boggans are born of dreams of hearth and home. If roads go ever on, the goal is always the return. They derive their greatest pleasures from work and a job well done. Honest work, good company, and a regular routine are all they need. Of all the Kithain they are known for their honesty and integrity. It is said they are as honest as the dirt under their fingernails.""",
+        affinity: 'Actor',
         decoration:
             'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
         description:
-            "Boggans are born of dreams of hearth and home. If roads go ever on, the goal is always the return. They derive their greatest pleasures from work and a job well done. Honest work, good company, and a regular routine are all they need. Of all the Kithain they are known for their honesty and integrity. It is said they are as honest as the dirt under their fingernails.",
+        """Hearty, Homey, and Hospitable, the Boggans are fae born of crafters' dreams. They derive pleasure from honest, hard work, whether it be tending the hearth in a freehold or crafting something with their hands. As such, most Boggans take jobs as tradespeople or in freeholds. Boggan nannies, construction workers, and factory workers are all common. Being valued for their skill with labour, many Sidhe prize them in their freeholds as treasured servants. In exchange for their servitude, Boggans recieve praise for their work, recognition, and most of all, overheard secrets. Boggans are notorious gossips who take note of the court machinations going on around them. Seelie do it out of "curiosity", Unseelie to save for a rainy day. The information they gather is relevant in the context of the comings and goings of nobles. With enough honest compliments to their work, one might be able to charm a tidbit or two out of a Boggan. They have an affinity to the Actor realm.""",
         overview: """There’s a little bit of boggan in everyone.
 Everyone likes to learn a secret, or to tell one; even the freest of spirits needs a place to return to between one journey and the next. Boggans thrive in these spaces, in the comfort of home, and the bonds between friends. Dreams of an honest day’s work and a cozy living provided by it, this kith has long enjoyed helping those who appreciate their efforts. Whether finishing a craftsman’s work at the end of a long day, completing the chores of a busy housekeeper, or bringing together unlikely friendships and romances, tales of mysterious folk helping others are the heart and soul of boggan history.
 
@@ -37,7 +37,7 @@ While not exactly shy, boggans work best just out of notice. Tracing their histo
             'https://vignette.wikia.nocookie.net/whitewolf/images/b/bc/KithClurichaun.png/revision/latest/scale-to-width-down/200?cb=20170503121058',
         unveiling:
             "The Clurichaun are Gallain native to Ireland, although they can be found anywhere that Irish immigrants have made their homes. They once encouraged dreamers to associate them with leprechauns, something they now greatly regret.",
-        affinities: [''],
+        affinity: null,
         decoration:
             'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
         description: null,
@@ -58,7 +58,7 @@ While not exactly shy, boggans work best just out of notice. Tracing their histo
             'https://vignette.wikia.nocookie.net/whitewolf/images/1/12/LogoKithEshu.png/revision/latest/scale-to-width-down/200?cb=20150325195304',
         unveiling:
             "Born of dreams of exotic adventure, the ever-travelling Eshu originally hail from Africa, India, the Middle East, and the ancient state of Chaldea. Over the centuries, however, they spread and grew, and now come from all corners of the globe. Known for their tales of adventure and exotic lands, Eshu are charming and regal, having a special talent for weaving a good story.",
-        affinities: [''],
+        affinity: null,
         decoration:
             'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
         description: null,
@@ -80,7 +80,7 @@ While not exactly shy, boggans work best just out of notice. Tracing their histo
             'https://vignette.wikia.nocookie.net/whitewolf/images/3/38/LogoKithNockers.png/revision/latest/scale-to-width-down/200?cb=20150325195454',
         unveiling:
             "Nockers are the artisans among the Kithain, able to craft the stuff of dreams into whatever they desire. Their creations are always flawed, however, and their knowledge of this curse makes them irritable and quick to anger.",
-        affinities: [''],
+        affinity: null,
         decoration:
             'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
         description: null,
@@ -102,7 +102,7 @@ While not exactly shy, boggans work best just out of notice. Tracing their histo
             'https://vignette.wikia.nocookie.net/whitewolf/images/8/86/KithPiskey.png/revision/latest/scale-to-width-down/200?cb=20170503121514',
         unveiling:
             "Solitary and semi-nomadic, the Piskies are a restless kith. They like settling down for a couple years, working and socializing with both mortals and kithain, then moving on to new adventures. They are especially fond of children and tend to befriend youngsters in need of a pal or defender.",
-        affinities: [''],
+        affinity: null,
         decoration:
             'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
         description: null,
@@ -124,7 +124,7 @@ While not exactly shy, boggans work best just out of notice. Tracing their histo
             'https://vignette.wikia.nocookie.net/whitewolf/images/d/d6/LogoKithPooka.png/revision/latest/scale-to-width-down/200?cb=20150325195621',
         unveiling:
             "Pranksters and comedians, Pooka are well-loved by kithain and mortal alike, but few who know them will ever trust them completely: they are incapable of telling the whole truth. Each is able to take on the form of a specific animal, most often one with a tie to human stories of mischief.",
-        affinities: [''],
+        affinity: null,
         decoration:
             'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
         description: null,
@@ -146,7 +146,7 @@ While not exactly shy, boggans work best just out of notice. Tracing their histo
             'https://vignette.wikia.nocookie.net/whitewolf/images/f/fd/LogoKithRedcaps.png/revision/latest/scale-to-width-down/200?cb=20150325195705',
         unveiling:
             "Fear and violence spawn dreams as readily as kings or commoners, and the Redcaps are the kithain most closely tied to nightmares. They gain their name from their traditional headwear - a white cap, dyed red in their victims' blood. They are quick to anger and hungry. Always hungry.",
-        affinities: [''],
+        affinity: null,
         decoration:
             'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
         description: null,
@@ -168,7 +168,7 @@ While not exactly shy, boggans work best just out of notice. Tracing their histo
             'https://vignette.wikia.nocookie.net/whitewolf/images/6/6a/KithSatyr.png/revision/latest/scale-to-width-down/150?cb=20150325195752',
         unveiling:
             "Satyrs are both wise and horny. They enjoy food, wine, philosophy, and the throwes of lust. Passionate to the end, they dive wholeheartedly into all they do, which mostly includes wine and parties. There are those who satiate their desires through the persuit of knowledge, and indeed the Satyrs can be some of the most intelligent of the Kithians with their debates, poetry, and music.",
-        affinities: [''],
+        affinity: null,
         decoration:
             'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
         description: null,
@@ -190,7 +190,7 @@ While not exactly shy, boggans work best just out of notice. Tracing their histo
             'https://vignette.wikia.nocookie.net/whitewolf/images/3/3c/KithSelkie.png/revision/latest/scale-to-width-down/200?cb=20170503121946',
         unveiling:
             "Selkies are neither fae of the Overwater (like most Kithain) nor of the Undersea (like the Merfolk or Morganed), but of the continually shifting shoreline. They are also caught between two forms: seal and human, never precisely one or the other.",
-        affinities: [''],
+        affinity: null,
         decoration:
             'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
         description: null,
@@ -212,7 +212,7 @@ While not exactly shy, boggans work best just out of notice. Tracing their histo
             'https://vignette.wikia.nocookie.net/whitewolf/images/c/cf/LogoKithSidhe.png/revision/latest?cb=20150325195829',
         unveiling:
             "The Sidhe are the kith born of the dreams of kings and queens - both noble and otherwise. Regal, beautiful and graceful, they are power and coldness personified. They are tied intimately to the Dreaming and are new to the Changeling Way; most of the Sidhe on Earth are either exiles or escapees from Arcadia, unable to return home.",
-        affinities: [''],
+        affinity: null,
         decoration:
             'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
         description:
@@ -235,7 +235,7 @@ While not exactly shy, boggans work best just out of notice. Tracing their histo
             'https://vignette.wikia.nocookie.net/whitewolf/images/b/b4/LogoKithSluagh.png/revision/latest/scale-to-width-down/200?cb=20150325195943',
         unveiling:
             "Called the underfolk by many, the sluagh (SLOO-ah) are often pariahs even among other fae. Though rumors persist of underground catacombs and mazelike lairs, many sluagh prefer crumbling Victorian mansions to dank sewers. Places dark and forgotten, often with a mushroom garden, attract them.",
-        affinities: [''],
+        affinity: null,
         decoration:
             'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
         description: null,
@@ -257,7 +257,7 @@ While not exactly shy, boggans work best just out of notice. Tracing their histo
             'https://vignette.wikia.nocookie.net/whitewolf/images/6/67/LogoKithTroll.png/revision/latest/scale-to-width-down/200?cb=20150325200048',
         unveiling:
             "As long as there have been mountains, there have been trolls. Known as giants, titans, and many other names, no culture does not mention them. Mortal traditions record them as benefactor and enemy and both are correct.",
-        affinities: [''],
+        affinity: null,
         decoration:
             'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
         description: null,
@@ -277,7 +277,7 @@ While not exactly shy, boggans work best just out of notice. Tracing their histo
 //        name: '',
 //        icon: '',
 //        unveiling: "",
-//        affinities: [''],
+//        affinity: null,
 //        court: court,
 //        decoration: decoration,
 //        description: null,
@@ -303,7 +303,7 @@ While not exactly shy, boggans work best just out of notice. Tracing their histo
             'https://vignette.wikia.nocookie.net/whitewolf/images/5/52/LogoKithBoggans.png/revision/latest/scale-to-width-down/200?cb=20150325195152',
         unveiling:
             "Boggarts place the well-being of their kind above the concerns of all other creatures. With a talent for getting organized, a very industrious spirit and an endless amount of greed, Boggarts can swarm over any opportunity like a horde of rats. Although they are quite willing to help the Shadow Court, they serve themselves first and foremost.",
-        affinities: [''],
+        affinity: null,
         decoration:
             'https://i.pinimg.com/564x/d3/3a/97/d33a97887b5905a04a8b62686492e315.jpg',
         description: null,

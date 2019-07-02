@@ -58,6 +58,19 @@ class KithCardBack extends StatelessWidget {
                 height: 10.0,
               ),
               Text(
+                'Affinity',
+                style: Theme.of(context).textTheme.display1,
+              ),
+              SizedBox(
+                height: 10.0,
+              ),
+              Text(
+                kith.affinity ?? '?',
+              ),
+              SizedBox(
+                height: 10.0,
+              ),
+              Text(
                 'Overview',
                 style: Theme.of(context).textTheme.display1,
               ),

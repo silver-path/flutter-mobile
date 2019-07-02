@@ -17,7 +17,7 @@ abstract class Kith implements Displayable {
   final String description;
   final String overview;
   final String decoration;
-  final List<String> affinities;
+  final String affinity;
 
   Kith({
     @required this.name,
@@ -27,7 +27,7 @@ abstract class Kith implements Displayable {
     @required this.description,
     @required this.overview,
     @required this.decoration,
-    @required this.affinities,
+    @required this.affinity,
   });
 }
 
@@ -42,7 +42,7 @@ class Kithain extends Kith {
     @required unveiling,
     @required description,
     @required overview,
-    @required affinities,
+    @required affinity,
     @required this.backgrounds,
   })  : assert(backgrounds.containsKey('seelie')),
         assert(backgrounds.containsKey('unseelie')),
@@ -54,7 +54,7 @@ class Kithain extends Kith {
           description: description,
           overview: overview,
           decoration: decoration,
-          affinities: affinities,
+          affinity: affinity,
         );
 
   factory Kithain.fromJson(Map<String, dynamic> json) =>
@@ -78,7 +78,7 @@ class Thallain extends Kith {
     @required unveiling,
     @required description,
     @required overview,
-    @required affinities,
+    @required affinity,
     @required this.background,
     court: Court.shadow,
   }) : super(
@@ -89,7 +89,7 @@ class Thallain extends Kith {
           description: description,
           overview: overview,
           decoration: decoration,
-          affinities: affinities,
+          affinity: affinity,
         );
 
   factory Thallain.fromJson(Map<String, dynamic> json) =>
