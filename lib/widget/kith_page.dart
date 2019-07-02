@@ -17,14 +17,6 @@ class KithPageState extends State<KithPage> {
   Court court;
   KithPageState({@required this.court});
 
-  onTap(Court court) {
-    if (court != this.court) {
-      setState(() {
-        this.court = court;
-      });
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
