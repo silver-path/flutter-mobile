@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../data/kith.dart';
 import '../data/court.dart';
 import '../core/string_helper.dart';
+import 'history_list_expansion_tile.dart';
 
 class KithCardBack extends StatelessWidget {
   final Kith kith;
@@ -9,23 +10,25 @@ class KithCardBack extends StatelessWidget {
 
   KithCardBack({@required this.kith, @required this.court});
 
-  Column buildHistory (BuildContext context, Kith kith) {
-    List<Widget> list = [
-      Text('History',style: Theme.of(context).textTheme.display1),
-      SizedBox(height: 10.0),
-    ];
+  HistoryListExpansionTile buildHistory(BuildContext context, Kith kith) {
+    HistoryListExpansionTile history = HistoryListExpansionTile(
+      text: 'History',
+      children: <Widget>[],
+    );
     if (kith.history != null) {
       for (var details in kith.history) {
-        list.add(Text(StringHelper.capitalize(details.title),style: Theme.of(context).textTheme.display2));
-        list.add(SizedBox(height: 10.0));
-        list.add(Text(details.content,style: Theme.of(context).textTheme.body1));
-        list.add(SizedBox(height: 10.0));
+        history.children.add(HistoryListExpansionTile(
+          text: StringHelper.capitalize(details.title),
+          childrenStyle: Theme.of(context).textTheme.display1,
+          children: <Widget>[
+            Text(details.content, style: Theme.of(context).textTheme.body1),
+          ],
+        ));
       }
-    } else list.add(Text('...',style: Theme.of(context).textTheme.body1));
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: list,
-    );
+    } else
+      history.children
+          .add(Text('...', style: Theme.of(context).textTheme.body1));
+    return history;
   }
 
   @override
